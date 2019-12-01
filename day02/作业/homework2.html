@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td colspan="3" style="font-size: 30px; font-weight: bold;">增加管理员</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="60">
+						<label for="uname">姓名：</label>
+					</td>
+					<td>
+						<input type="text" name="uname" id="uname" />
+					</td>
+					<td>
+						<label>10个字符以内</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="upassword">密码：</label>
+					</td>
+					<td>
+						<input type="text" name="upassword" id="upassword" />
+					</td>
+					<td>
+						<label>10个字符以内</label>
+					</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td colspan="2">
+						<input type="radio" name="gender" value="female" />女士
+						<input type="radio" name="gender" value="male" />男士
+					</td>
+				</tr>
+				<tr>
+					<td>角色：</td>
+					<td>
+						<input type="checkbox" name="manager" 
+						value="supermanager" />超级管理员
+						<br>
+						<input type="checkbox" name="manager" 
+						value="accountmanager" />账单管理员
+					</td>
+					<td>
+						<label>至少选择一个角色</label>
+					</td>
+				</tr>
+				<tr>
+					<td>头像：</td>
+					<td colspan="2">
+						<input type="file" name="ufile"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" name="submit" />
+						<input type="reset" name="reset" value="重填" />
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
