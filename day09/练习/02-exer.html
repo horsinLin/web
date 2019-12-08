@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 判断素数(质数)
+			//   素数：只能被1和本身整除的数字
+			// 		从弹框中随意输入一个数字，判断是否为素数
+			var num = prompt("请随意输入一个数")
+			for(var i=2; i<num; i++){
+				if(num % i == 0){
+					console.log(num," 不是素数")
+					break;
+				}
+				console.log(num," 是素数！");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

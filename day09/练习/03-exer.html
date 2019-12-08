@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 在弹框中输入年月份，判断星期几
+			//   已知：1990年1月1日是星期一
+			// 		  解决：
+			// 		    1.接收年月日，转换为Number
+			// 			2.计算当前日期与1990-01-01之间间隔多少天
+			// 			  年累加 1990 -> year - 1
+			// 			  当前年中月份的累加
+			// 			  当前月的天数
+			// 			3.总天数 % 7
+			// 			  0 - 6 代表周日-周六
+			// 接收哟用户输入的年月日
+			var year = Number(prompt("请输入年份"));
+			var month = Number(prompt("请输入月份"));
+			var day = Number(prompt("请输入日期"));
+			// 总天数
+			var totalDays = 0;
+			// 判断是否为闰年
+			var isRun = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+			// 计算天数 年 和 月
+			for(var i = 1990; i < year; i++){
+				totalDays += 365;
+				if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+					totalDays += 1;
+				}
+			}
+			// 当前年中月份累加
+			for(var i = 1; i < month; i++){
+				switch (i){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+						totalDays += 30;
+						break;
+					case 4:
+					case 6:
+					case 9:
+					case 11:
+						totalDays += 31;
+						break;
+					case 2:
+						totalDays += 28;
+						if(isRun){
+							totalDays += 1;
+							break
+						}
+						break;
+				}
+			}
+			// 累加当前月的天数
+			totalDays += day;
+			// 计算星期几，只需要在总天数对7取余，余数表示周几
+			var date = totalDays % 7;
+			switch (date){
+				case 0:
+					console.log("日")
+					break;
+				case 1:
+					console.log("一")
+					break;
+				case 2:
+					console.log("二")
+					break;
+				case 3:
+					console.log("三")
+					break;
+				case 4:
+					console.log("四")
+					break;
+				case 5:
+					console.log("五")
+					break;
+				case 6:
+					console.log("六")
+					break;
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

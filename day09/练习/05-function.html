@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 声明一个无参数无返回值的函数
+			function fn1(){
+				console.log("这是一个无参数无返回值的函数");
+			}
+			// 函数调用
+			fn1();
+			// 声明一个带参数无返回值的函数
+			function fn2(a,b){
+				console.log("a + b = ",a+b);
+			}
+			fn2(1,2);
+			// 带参数带返回值的函数
+			function sum(a,b){
+				return a + b;
+			}
+			var res = sum(1,2)
+			console.log("a + b = ", res)
+			// 匿名函数
+			var fn = function(){
+				console.log("匿名函数");
+			}
+			fn();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
