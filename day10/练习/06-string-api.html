@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var str = "Hello World";
+			// 1.获取指定位置字符串
+			var s = str.charAt(9);
+			console.log(s);
+			// 2.获取指定位置字符对应的Unicode编码
+			var s2 = str.charCodeAt(9);
+			console.log(s2);
+			var str2 = "李逵";
+			var s3 = str2.charCodeAt(0);
+			console.log(s3);
+			console.log(s3.toString(16));
+			// 3.获取指定位置字符对应的下标
+			var index = str.indexOf("l");
+			console.log(index);
+			var lastIndex = str.lastIndexOf("l");
+			console.log(lastIndex);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

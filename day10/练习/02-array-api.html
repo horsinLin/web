@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 定义数组
+			var arr = [10,20,30];
+			// 1. push() 向数组的末尾添加元素
+			var length = arr.push(40);
+			console.log(arr,length);
+			arr.push("50","60");
+			console.log(arr,arr.length);
+			// 2. pop() 删除并返回数组中最后一个元素
+			var elem = arr.pop();
+			console.log(arr,elem)
+			// 3. unshift() 向数组的头部添加一个或多个元素
+			console.log(arr,arr.unshift(1,2,3));
+			// 4. shift 移除头部元素
+			console.log(arr,arr.shift(1));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

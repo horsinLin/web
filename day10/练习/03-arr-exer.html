@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function decode2Bin(){
+				var num = Number(prompt("请输入一个数字"));
+				var arr = [];
+				while(num != 0){
+					arr[arr.length] = num % 2;
+					num = parseInt(num / 2);
+				}
+				// 显示二进制
+				arr.reverse();
+				console.log(arr.join(''));
+			}
+			decode2Bin()
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
