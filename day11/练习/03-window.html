@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 全局变量和函数都是window对象的属性和方法
+			var a = 100;
+			function sum(a,b){
+				return a + b;
+			}
+			console.log(a,sum(10,20));
+			console.log(window.a,window.sum(10,20));
+			console.log(window);
+			// 对话框
+			alert("window的方法alert");
+			var = res = window.confirm("是否确认");
+			console.log(res);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
