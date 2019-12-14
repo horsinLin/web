@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			table{
+				width: 600px;
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			th,td{
+				text-align: center;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shop">
+			<input type="text" name="showName" placeholder="商品名称"/>
+			<input type="text" name="showPrice" placeholder="商品价格"/>
+			<input type="text" name="showNum" placeholder="商品数量"/>
+			<button type="button" onclick="addShop()">添加</button>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>商品名称</th>
+					<th>商品价格</th>
+					<th>商品数量</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</body>
+	<script type="text/javascript">
+		function addShop(){
+			// 1.获取元素节点及元素值
+			var shopName = document.getElementsByTagName('input')[0].value;
+			var shopPrice = document.getElementsByTagName('input')[1].value;
+			var shopNum = document.getElementsByTagName('input')[2].value;
+			var tbody = document.getElementsByTagName('tbody')[0];
+			// 2.创建行
+			var tr = document.createElement('tr');
+			// 3.创建四个单元格
+			var tdName = document.createElement('td');
+			tdName.innerHTML = shopName;
+			var tdPrice = document.createElement('td');
+			tdPrice.innerHTML = shopPrice;
+			var tdNum = document.createElement('td');
+			tdNum.innerHTML = shopNum;
+			// 4.操作按钮
+			var tdOper = document.createElement('td');
+			var btnUpdate = document.createElement('button');
+			var btnDelete = document.createElement('button');
+			btnUpdate.innerHTML = "修改";
+			btnDelete.innerHTML = "删除";
+			// 5.单元格添加按钮
+			tdOper.appendChild(btnUpdate);
+			tdOper.appendChild(btnDelete);
+			// 6.向网页中添加元素
+			tr.appendChild(tdName);
+			tr.appendChild(tdPrice);
+			tr.appendChild(tdNum);
+			tr.appendChild(tdOper);
+			tbody.appendChild(tr);
+		}
+	</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div style="width: 200px; height: 200px; background: red;"></div>
+	</body>
+	<script type="text/javascript">
+		var div = document.getElementsByTagName('div')[0];
+		// 添加事件
+		div.onclick = function(){
+			alert("div被点击");
+		};
+		document.body.onclick = function(){
+			alert("body被点击");
+		};
+	</script>
+</html>
