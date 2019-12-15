@@ -1,0 +1,109 @@
+1. jQuery 样式操作
+  1. attr()
+    添加id或class属性，对应选择器，为元素添加样式
+  2. addClass('className')
+    将className作为值添加打元素的class属性上，是可以连缀调用的
+  3. removeClass('className')
+    移除className
+    参数可以省略，表示清空类选择器
+  4. toggleClass('')
+    切换样式：
+      元素如果具备className对应的样式，则删除
+  	  如果没有，就添加
+  5. css()
+    获取元素样式属性的值
+  6. css('','')
+    设置元素的样式
+  7. css(JSON对象)
+    设置元素样式，参数为一组css属性
+	JSON对象：是一种约束了格式的对象表现形式
+	JSON：JavaScript Object Notation
+	JSON对象的表示形式：
+	  1. JSON对象必须使用 {} 括起来
+	  2.使用键值对来声明数据(属性与值)
+	  3.所有的属性在声明时必须使用字符串形式""，属性值如果也是字符串，必须使用""
+	  4.属性与值之间使用:连接
+	  5.多对属性和值之间使用，隔开
+2. jQuery 操作节点
+  1. children() / children('selector')
+    获取某个 jQuery 对象下所有的子元素，或者获取带有指定选择器的子元素。
+	注意：只考虑之间子元素，不考虑间接后代元素
+  2. next() / next('selector')
+    获取某 jQuery 对象的下一个兄弟元素 / 满足 selector 的下一个兄弟元素
+  3. prev() / prev('selector')
+    获取某 jQuery 对象的上一个兄弟元素 / 满足 selector 的上一个兄弟元素
+  4. siblings() / siblings('selector')
+    获取某 jQuery 对象的所有兄弟元素 / 满足 selector 的兄弟元素
+  5. find('selector')
+    获取满足 selector 的所有后代元素
+  6. parent()
+    获取 jQuery 对象的父元素
+3. jQuery 创建对象
+  1. $('标签')
+4. jQuery 插入元素
+  1.内部插入
+    将创建好的元素作为子元素插入到网页中
+	$obj.append($new)
+	  将新创建的元素作为最后一个子元素添加
+	$obj.prepend($new)
+	  将创建好的元素作为第一个子元素添加
+  2.作为兄弟元素插入
+    $obj.after($new)
+	  将新元素作为$obj的下一个兄弟元素添加进来
+	$obj.before($new)
+	  将新元素作为$obj的上一个兄弟元素添加进来
+5. jQuery 删除元素
+  语法：$obj.remove()
+  作用：将$obj移除掉
+6. jQuery 事件处理
+  1.页面加载完成之后再执行
+    语法：
+	  1. $(document).ready(function(){
+		  // 加载完成之后执行的操作
+	     });
+	  2. $().ready(function(){
+		  // 加载完成之后执行的操作
+	     });
+	  3. $(function(){
+		  // 加载完成之后执行的操作
+	     });
+	与原生 onload 事件的区别：
+	  1.原生 onload 事件不能多次使用，后面的会把前面的覆盖掉，只执行
+	    最后书写的 onload
+		jQuery 中的 ready 方法，也表示文档加载完毕，可以使用多次，所
+		有的相关函数都会被执行，不会被覆盖
+	  2.原生 onload 事件，等待页面中 DOM 节点及所有页面资源全部加载完
+	    成才执行
+		jQuery 中的 ready 方法，只等待 DOM 树加载完成就执行相关函数
+  2. jQuery 事件绑定
+    1.方式1
+	  $obj.bind('事件名称',function(){
+		  // 事件处理函数
+	  });
+	  注意：
+	    事件名称省略 on 前缀
+	2.方式2
+	  $obj.事件名称(function(){
+		  // 事件处理
+	  });
+	  注意：
+	    事件名称省略 on 前缀
+  3. jQuery 的事件对象
+    在绑定事件时，允许传递参数表示事件对象
+	$obj.bind('click',function(){
+		console.log(event);
+	});
+	事件对象的使用方法，与原生的一致
+	event.target
+	event.offsetX
+
+
+
+
+
+
+
+
+
+
+
